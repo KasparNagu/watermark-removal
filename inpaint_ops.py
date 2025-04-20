@@ -43,9 +43,9 @@ def gen_conv(x, cnum, ksize, stride=1, rate=1, name='conv',
         p = int(rate*(ksize-1)/2)
         x = tf.pad(x, [[0,0], [p, p], [p, p], [0,0]], mode=padding)
         padding = 'VALID'
-    x = tf.compat.v1.layers.conv2d(
-        x, cnum, ksize, stride, dilation_rate=rate,
-        activation=None, padding=padding, name=name)
+    x = tf.keras.layers.Conv2D(
+        cnum, ksize, stride, dilation_rate=rate,
+        activation=None, padding=padding, name=name)(x)
     if cnum == 3 or activation is None:
         # conv for output
         return x
