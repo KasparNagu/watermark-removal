@@ -40,7 +40,7 @@ And also a shoutout to [Chu-Tak Li](https://chutakcode.wixsite.com/website) for 
 - Install tensorflow toolkit [neuralgym](https://github.com/bg1szd/neuralgym). (To support tensorflow v2, install from the forked repo)
 
       !pip install git+https://github.com/bg1szd/neuralgym
-      In python distribution site-packages/neuralgym/ops/gan_opy.py I manually changed tf.compat.v1.layers.Conv2D to tf.keras.layers.Conv2D, not sure if this is correct but it makes the code run. 
+- In python distributions `site-packages/neuralgym/ops/gan_opy.py` I manually changed `tf.compat.v1.layers.Conv2D` to `tf.keras.layers.Conv2D`, not sure if this is correct but it makes the code run. If it is indeed correct, it should be changed in the neuralgym repo
 
 - Download the model dirs using this [link](https://drive.google.com/drive/folders/1xRV4EdjJuAfsX9pQme6XeoFznKXG0ptJ?usp=sharing) and put it under `model/` (rename `checkpoint.txt` to `checkpoint` because sometimes google drive automatically adds .txt after download)
 
